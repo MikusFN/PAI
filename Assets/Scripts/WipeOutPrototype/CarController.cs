@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public float acceleration;
+    public float minacceleration;
+    public float maxacceleration;
     public float rotationRate;
     public float rotationAngle;
     public float turnSpeed;
     public float smothTime;
 
+    private float acceleration;
     float rotationVelocity;
     //float groundAngVelocity;
     public new Rigidbody rigidbody;
@@ -28,7 +30,7 @@ public class CarController : MonoBehaviour
         pos.y = pos.y + 0.3f;
         //pos.z = pos.z + 5;
         //pos.x = pos.x + 5;
-
+        acceleration = minacceleration;
         transform.position = pos;
         transform.LookAt(pos + spline.GetDirection(0.001f));
 
@@ -92,9 +94,9 @@ public class CarController : MonoBehaviour
         if( Physics.Raycast(transform.position, -transform.up, out hit, 1f) && hit.collider.tag == "CorrectLine")
         CheckInclination();
 
-        if (Input.GetKey(KeyCode.Space)&&acceleration<20000)
-            acceleration += 100;
-        else if(acceleration > 5000)
+        if (Input.GetKey(KeyCode.Space)&&acceleration<maxacceleration)
+            acceleration += 200;
+        else if(acceleration > minacceleration)
         {
             acceleration -= 1000;
         }
