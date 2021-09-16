@@ -66,6 +66,8 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
             autoPilot = !autoPilot;
 
+        
+
         for (int i = 0; i < directionValues.Length; i++)
         {
             if (directionValues[i] != firstDirections[i])

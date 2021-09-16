@@ -109,13 +109,13 @@ public class BezierSpline : MonoBehaviour
         EnforceMode(index);
     }
 
-    //public void UpdatePointsNaSpline()
-    //{
-    //    foreach (Transform item in GetComponentInChildren<ItemsInSpline>().items)
-    //    {
-    //        DestroyImmediate(item.gameObject, true);
-    //    }
-    //}
+    public void UpdatePointsNaSpline()
+    {
+        //foreach (ItemsInSpline item in GetComponentsInChildren<ItemsInSpline>())
+        //{
+        //    DestroyImmediate(item.gameObject, true);
+        //}
+    }
 
     #endregion Properties
 

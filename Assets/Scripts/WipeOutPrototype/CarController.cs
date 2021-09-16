@@ -91,6 +91,13 @@ public class CarController : MonoBehaviour
         }
         if( Physics.Raycast(transform.position, -transform.up, out hit, 1f) && hit.collider.tag == "CorrectLine")
         CheckInclination();
+
+        if (Input.GetKey(KeyCode.Space)&&acceleration<20000)
+            acceleration += 100;
+        else if(acceleration > 5000)
+        {
+            acceleration -= 1000;
+        }
     }
 
     public void ActivateThrusters()
