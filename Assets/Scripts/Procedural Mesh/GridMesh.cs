@@ -35,15 +35,15 @@ public class GridMesh : MonoBehaviour
 
             GetComponent<MeshCollider>().sharedMesh = mesh;
             addCollider = false;
-            RailMesh[] objects = GetComponentsInChildren<RailMesh>();
-            foreach (RailMesh item in objects)
-            {
-                item.gameObject.SetActive(false);
-            }
-            foreach (RailMesh item in objects)
-            {
-                item.gameObject.SetActive(true);
-            }
+            //RailMesh[] objects = GetComponentsInChildren<RailMesh>();
+            //foreach (RailMesh item in objects)
+            //{
+            //    item.gameObject.SetActive(false);
+            //}
+            //foreach (RailMesh item in objects)
+            //{
+            //    item.gameObject.SetActive(true);
+            //}
         }
         //p += Time.deltaTime / 10;
         ////Bound para o clamp de 0 a 1 da spline e os modos do objecto

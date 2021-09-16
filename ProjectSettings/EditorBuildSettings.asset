@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/WipeOutPrototype.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Spline Editor.unity
     guid: f318e2e9859dea049b2490362d4b16c6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ProjectoAI.unity
     guid: ad336f83b55e5904fb4af018a9131bfd
   - enabled: 0

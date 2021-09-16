@@ -38,7 +38,7 @@ public class RailMesh : MonoBehaviour {
                 GenerateMesh(spline.PointsMeshLine, spline.InLoop);
 
             }
-            //GetComponent<MeshCollider>().sharedMesh = mesh;
+            GetComponent<MeshCollider>().sharedMesh = mesh;
             addCollider = false;
         }
         //p += Time.deltaTime / 10;
