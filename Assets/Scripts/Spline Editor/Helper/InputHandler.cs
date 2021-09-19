@@ -50,7 +50,7 @@ public class InputHandler : MonoBehaviour
 
     IEnumerator LateStart()
     {
-        yield return new WaitForSecondsRealtime(2.0f);
+        yield return new WaitForSecondsRealtime(1.0f);
         car.ActivateThrusters();
     }
 
@@ -145,7 +145,7 @@ public class InputHandler : MonoBehaviour
             }
 
         }
-        else if (car.isInclined && balanca)
+        else if (car.isInclined)
         {
             throttle = Input.GetAxis("Vertical");
             if (Mathf.Abs(data.Frente - data.Tras) * scaleSpeed > diferenceV)
@@ -166,11 +166,11 @@ public class InputHandler : MonoBehaviour
                 throttle = 0;
             }
         }
-        if (balanca)
-        {
+        //if (balanca)
+        //{
             car.Respawn(Input.GetKeyDown(KeyCode.R) || (Physics.Raycast(transform.position, transform.forward, out hit, 1f) && (hit.collider.tag == "LeftRail" || hit.collider.tag == "RightRail")));
-            Debug.Log(Input.GetKeyDown(KeyCode.R) || (Physics.Raycast(transform.position, transform.forward, out hit, 1f) && (hit.collider.tag == "LeftRail" || hit.collider.tag == "RightRail")));
-        }
+            //Debug.Log(Input.GetKeyDown(KeyCode.R) || (Physics.Raycast(transform.position, transform.forward, out hit, 1f) && (hit.collider.tag == "LeftRail" || hit.collider.tag == "RightRail")));
+        //}
         //else if((!car.isInclined))
         //{
         //    autoPilot = false;
